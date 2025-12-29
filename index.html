@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusuf KARADUMAN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-mono">
+    <!-- Header -->
+    <header class="p-6 border-b border-gray-700">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-bold text-neon-green">Yusuf KARADUMAN</h1>
+            <nav>
+                <button id="menu-button" class="md:hidden text-neon-green focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <ul id="menu" class="hidden md:flex md:space-x-6 text-lg">
+                    <li class="text-center"><a href="#about" class="hover:text-neon-green">Hakkımda</a></li>
+                    <li class="text-center"><a href="#portfolio" class="hover:text-neon-green">Çalışmalar</a></li>
+                    <li class="text-center"><a href="#contact" class="hover:text-neon-green">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
+        <div class="text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-bold text-neon-green">Dijital Dünyama Hoş Geldin</h2>
+            <p class="text-gray-400 mt-4 text-lg md:text-xl">Beraber Kodun Derinliklerine ve Güvenliğin Sınırlarına Yolculuk Yapalım</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-900">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-neon-green mb-8">Hakkımda</h2>
+            <p class="text-gray-400 max-w-3xl mx-auto text-lg">Merhaba, ben Yusuf. Siber güvenlik ve yazılım konusunda tutkulu ve meraklı bir geliştiriciyim. Amacım, teknoloji dünyasını keşfetmek, yenilikçi çözümler üretmek ve siber güvenliğin karmaşık dünyasında insanlara rehberlik ederek katkı sağlamak. Sorun çözme ve kodlama tutkusuyla, sürekli gelişen dijital dünyada fark yaratmayı hedefliyorum.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-neon-green mb-8">Çalışmalarım</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
+                    <h3 class="text-2xl font-bold text-neon-green">Hackmasters 2024</h3>
+                    <p class="text-gray-400 mt-2">
+                        <a href="https://www.linkedin.com/posts/do%C4%9Fukan%C3%A7al%C4%B1%C5%9Fkan_zer0night-ekibi-olarak-teknofest-hackmasters-activity-7228064308960649218-gltd?utm_source=share&utm_medium=member_desktop" 
+                           class="underline text-neon-green hover:text-white">
+                           Hackmasters 2024 ekibimle beraber 20.sırada yarışmayı tamamladık.
+                        </a>
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
+                    <h3 class="text-2xl font-bold text-neon-green">Bayraksende CTF Yarışması</h3>
+                    <p class="text-gray-400 mt-2">
+                        <a href="https://www.linkedin.com/posts/do%C4%9Fukan%C3%A7al%C4%B1%C5%9Fkan_5-liseler-aras%C4%B1-ulusal-bayra%C4%9F%C4%B1-yakala-siber-ugcPost-7200395236752162818-F3uq?utm_source=share&utm_medium=member_desktop" 
+                           class="underline text-neon-green hover:text-white">
+                           Bayraksende CTF yarışmasında finalde takımımla beraber 14. sırada yer aldık.
+                        </a>
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
+                    <h3 class="text-2xl font-bold text-neon-green">Adeo Chupacapra Vakası Analizi</h3>
+                    <p class="text-gray-400 mt-2">
+                        <a href="https://www.linkedin.com/posts/yusuf-karaduman-666227290_chupacabra-vakas%C4%B1-activity-7153851415361138688-i900?utm_source=share&utm_medium=member_desktop" 
+                           class="underline text-neon-green hover:text-white">
+                           Adeo Chupacapra vakasını analiz ettim, bununla ilgili dokümantasyon hazırladım.
+                        </a>
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
+                    <h3 class="text-2xl font-bold text-neon-green">MedusaLocker Ransomware Grubu Analizi</h3>
+                    <p class="text-gray-400 mt-2">
+                        <a href="https://www.linkedin.com/posts/samet-yusuf-i%C3%A7gen-3310b32a2_medusalocker-ttp-diamond-model-ioc-ugcPost-7214722817018257408-9NrC?utm_source=share&utm_medium=member_desktop" 
+                           class="underline text-neon-green hover:text-white">
+                           MedusaLocker ransomware grubu hakkında detaylı bir araştırma yapıp belge hazırladım.
+                        </a>
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
+                    <h3 class="text-2xl font-bold text-neon-green">8220 Gang</h3>
+                    <p class="text-gray-400 mt-2">
+                        <a href="https://www.linkedin.com/posts/yusuf-karaduman-666227290_8220-gang-siber-tehdit-i%CC%87stihbarat%C4%B1-oracle-activity-7206418469397966848-gVzO?utm_source=share&utm_medium=member_desktop" 
+                           class="underline text-neon-green hover:text-white">
+                           Saygıdeğer büyüğüm ile beraber 8220 Gang'i araştırıp kapsamlı bir belge hazırladık.
+                        </a>
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
+                    <h3 class="text-2xl font-bold text-neon-green">Nova Coin</h3>
+                    <p class="text-gray-400 mt-2">
+                        <a href="https://github.com/Deyiphafgug/Ton-nova" 
+                           class="underline text-neon-green hover:text-white">
+                           Web3.0 alanında TON altyapısında coin geliştirdik.
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-neon-green mb-8">İletişim Adresleri</h2>
+            <div class="max-w-lg mx-auto space-y-4">
+                <p class="text-gray-400">Aşağıdaki platformlar üzerinden benimle iletişime geçebilirsiniz:</p>
+                <div class="space-y-4">
+                    <a href="mailto:ysf.krdmn.info@gmail.com" class="block p-3 bg-gray-800 text-gray-200 rounded hover:bg-gray-700">Email: ysf.krdmn.info@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/yusuf-karaduman-666227290/" target="_blank" class="block p-3 bg-gray-800 text-gray-200 rounded hover:bg-gray-700">LinkedIn: LinkedIn Profili</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-6 text-center">
+        <p class="text-gray-400">&copy;2025 Tüm hakları saklıdır.</p>
+    </footer>
+
+    <style>
+        .text-neon-green {
+            color: #39ff14;
+        }
+
+        .bg-neon-green {
+            background-color: #39ff14;
+        }
+    </style>
+    
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.getElementById('menu');
+
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
