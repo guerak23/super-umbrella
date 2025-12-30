@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /assets/private/  # Özel dosyaların varsa gizle
+Sitemap: https://burakfidan.dev/sitemap.xml
