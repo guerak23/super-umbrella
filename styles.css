@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-   
     /* ARKA PLANLAR (Derin, Soğuk Gece Mavisi) */
     --bg-primary: #020617;   /* Çok koyu, siyaha yakın mavi */
     --bg-secondary: #0f172a; /* Bir tık açık, kartlar için */
     --bg-tertiary: #1e293b;  /* Başlık çubukları için */
     
     /* VURGU RENKLERİ (Sadece Mavi Tonları - Sarı Yok!) */
-    --accent-green: #06b6d4; /* Ana Butonlar (Camgöbeği/Cyan) */
+    --accent-green: #06b6d4; /* Ana Butonlar ve Vurgular (Camgöbeği/Cyan) */
     --accent-blue: #3b82f6;  /* İkincil detaylar (Elektrik Mavisi) */
     --accent-purple: #60a5fa; /* Üçüncü ton (Açık Gök Mavisi) */
     
@@ -16,13 +15,16 @@
     --text-primary: #f0f9ff; /* Buz beyazı */
     --text-secondary: #94a3b8; /* Gri-Mavi metalik yazı */
     --border-color: #1e293b;
-
+    
+    /* Kod Renkleri (IDE Görünümü İçin) */
+    --code-keyword: #c678dd;
+    --code-string: #98c379;
+    --code-comment: #5c6370;
 }
-
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; } /* Yumuşak kaydırma */
+html { scroll-behavior: smooth; }
 
 body {
     font-family: 'Inter', sans-serif;
@@ -32,13 +34,13 @@ body {
     line-height: 1.6;
 }
 
-/* Matrix Effect */
+/* Matrix Effect Canvas */
 .matrix-bg {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     z-index: -1;
-    opacity: 0.05;
+    opacity: 0.05; /* Arka planı çok boğmaması için kısık opaklık */
     pointer-events: none;
 }
 
@@ -48,14 +50,14 @@ body {
     padding: 0 20px;
 }
 
-/* HEADER & NAV (Navigasyon Sorunu Çözümü) */
+/* HEADER & NAV */
 .header {
     position: fixed;
     top: 0; left: 0; width: 100%;
-    background: rgba(10, 10, 15, 0.9);
+    background: rgba(2, 6, 23, 0.9); /* Temaya uygun koyu zemin */
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    z-index: 1000; /* En üstte durmasını sağlar */
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    z-index: 1000;
     padding: 1rem 0;
 }
 
@@ -92,94 +94,123 @@ body {
 
 .nav-links a:hover { color: var(--accent-green); }
 
-/* HERO SECTION (İstediğin Tasarım) */
+/* --- HERO BÖLÜMÜ (KARŞILAMA EKRANI) --- */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 80px;
-    
-    /* BU İKİ SATIRI MUTLAKA EKLE: */
+    padding-top: 100px;
     position: relative; 
-    z-index: 5; /* Butonları arka planın üzerine çıkarır */
+    z-index: 5;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
+    padding-bottom: 2rem;
 }
 
+/* Kod Ön Ekleri (const profile = { gibi) */
 .code-prefix {
     font-family: 'JetBrains Mono', monospace;
     color: var(--accent-blue);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-size: 1rem;
 }
-
 .keyword { color: var(--accent-purple); }
 .variable { color: var(--accent-blue); }
-.string { color: #ce9178; } /* String rengi (turuncumsu) */
-.key { color: var(--accent-blue); }
+.string { color: #a5d6ff; } /* Mavi tonlu string rengi */
+.key { color: var(--accent-green); }
+.comment { color: var(--text-secondary); opacity: 0.7; font-style: italic; }
 
-.hero h1 {
-    font-size: clamp(3rem, 5vw, 5rem); /* Responsive büyük font */
+/* 1. Ana Başlık: Digital Creator */
+.glitch-title {
+    font-size: clamp(3rem, 6vw, 5.5rem);
     line-height: 1.1;
     font-weight: 800;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     color: var(--accent-green);
+    letter-spacing: -0.02em;
 }
 
+/* 2. Alt Satır: Erasmus+ Coordinator */
+.glitch-title span {
+    display: block;
+    margin-top: 15px; /* Digital Creator ile arasını açar */
+    margin-bottom: 15px;
+    font-size: 0.5em !important;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* 3. İkinci Başlık: Cyber Security Analyst */
 .hero-subtitle {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.2rem;
-    color: var(--text-secondary);
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-top: 3rem; /* Yukarıdaki blokla arasını İYİCE AÇTIK */
     margin-bottom: 2rem;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-left: 2px solid var(--accent-blue);
+    padding-left: 15px; /* Sol tarafa çizgi ekleyip vurguladık */
 }
 
+/* 4. Kod Kutusu (Code Box) - Geri Getirilen Tasarım */
 .code-details {
-    font-family: 'JetBrains Mono', monospace;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(15, 23, 42, 0.6); /* Yarı saydam koyu zemin */
     padding: 1.5rem;
     border-radius: 8px;
-    border-left: 3px solid var(--accent-green);
-    margin-bottom: 2rem;
+    border-left: 3px solid var(--accent-green); /* Neon sol çizgi */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* İnce çerçeve */
+    font-family: 'JetBrains Mono', monospace;
     font-size: 0.95rem;
     line-height: 1.8;
-}
-
-.hero-description {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
     margin-bottom: 2.5rem;
-    max-width: 600px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5); /* Derinlik */
+    overflow-x: auto;
 }
 
-/* Butonlar */
-.cta-buttons {display: flex;
+/* 5. Açıklama Metni */
+.hero-description {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin-bottom: 3rem;
+}
+
+/* BUTONLAR */
+.cta-buttons {
+    display: flex;
     gap: 1rem;
-    
-    /* Tıklanabilirliği garantiye alalım */
     position: relative;
-    z-index: 10; }
+    z-index: 10;
+}
 
 .btn {
-    padding: 12px 24px;
+    padding: 14px 28px;
     border-radius: 6px;
     text-decoration: none;
     font-family: 'JetBrains Mono', monospace;
     font-weight: 600;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .btn-primary {
-    background: rgba(0, 255, 65, 0.1);
+    background: rgba(6, 182, 212, 0.1);
     border-color: var(--accent-green);
     color: var(--accent-green);
 }
 .btn-primary:hover {
     background: var(--accent-green);
-    color: #000;
+    color: #020617; /* Hover olunca yazı siyah olsun */
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
 }
 
 .btn-secondary {
@@ -189,16 +220,20 @@ body {
 .btn-secondary:hover {
     border-color: var(--text-primary);
     color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* PROJECTS SECTION */
 .projects { padding: 100px 0; }
+
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
-.section-prefix { color: var(--accent-purple); }
-.accent-text { color: var(--accent-green); }
+.section-prefix { color: var(--accent-purple); font-family: 'JetBrains Mono', monospace; }
+.section-description { color: var(--text-secondary); max-width: 600px; }
+.accent-text { color: var(--accent-green); font-weight: bold; }
 
 .projects-grid {
     display: grid;
@@ -212,12 +247,13 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    position: relative;
 }
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
     border-color: var(--accent-green);
-    box-shadow: 0 10px 30px rgba(0,255,65,0.1);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15);
 }
 
 .project-header {
@@ -226,6 +262,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .project-dots { display: flex; gap: 6px; }
@@ -235,53 +272,94 @@ body {
 .dot-green { background: #27ca3f; }
 
 .project-body { padding: 1.5rem; }
-.project-title { color: var(--accent-green); margin-bottom: 10px; font-family: 'JetBrains Mono'; }
-.project-description { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 15px; }
+.project-title { 
+    color: var(--text-primary); 
+    margin-bottom: 10px; 
+    font-family: 'JetBrains Mono'; 
+    font-size: 1.25rem;
+}
+.project-card:hover .project-title { color: var(--accent-green); }
+
+.project-description { 
+    font-size: 0.95rem; 
+    color: var(--text-secondary); 
+    margin-bottom: 20px; 
+    line-height: 1.6;
+}
+
 .project-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
 .stack-item {
     font-size: 0.75rem;
-    padding: 4px 8px;
-    background: rgba(100,255,218,0.1);
+    padding: 4px 10px;
+    background: rgba(59, 130, 246, 0.1);
     color: var(--accent-blue);
     border-radius: 4px;
+    font-family: 'JetBrains Mono';
 }
+
 .project-links a {
     color: var(--text-primary);
     text-decoration: none;
     font-size: 0.9rem;
     margin-right: 15px;
-    border-bottom: 1px solid var(--accent-green);
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+.project-links a:hover {
+    color: var(--accent-green);
+    border-bottom-color: var(--accent-green);
 }
 
-/* CV SECTION (Düzeltilen Yükseklik) */
+/* CV SECTION */
 .cv-section { padding: 100px 0; background: var(--bg-primary); }
 
 .cv-viewer {
     width: 100%;
-    height: 85vh; /* Yükseklik sorunu çözümü */
+    height: 85vh;
     min-height: 800px;
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    margin-top: 20px;
+    margin-top: 30px;
     overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 .cv-viewer iframe { width: 100%; height: 100%; border: none; }
 
 /* FOOTER */
 .footer {
-    padding: 2rem 0;
+    padding: 3rem 0;
     text-align: center;
     border-top: 1px solid var(--border-color);
     margin-top: 50px;
+    background: var(--bg-secondary);
 }
-.social-links { margin-top: 1rem; }
-.social-links a { color: var(--text-secondary); margin: 0 10px; font-size: 1.2rem; transition: color 0.3s;}
-.social-links a:hover { color: var(--accent-green); }
+.social-links { margin-top: 1.5rem; display: flex; justify-content: center; gap: 20px; }
+.social-links a { 
+    color: var(--text-secondary); 
+    font-size: 1.5rem; 
+    transition: transform 0.3s, color 0.3s;
+}
+.social-links a:hover { 
+    color: var(--accent-green); 
+    transform: translateY(-3px);
+}
 
-/* Responsive */
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { 
+    background: var(--bg-tertiary); 
+    border-radius: 5px; 
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Mobilde menüyü gizle (basitlik için) */
-    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    .hero { padding-top: 120px; align-items: flex-start; }
+    .hero h1 { font-size: 2.8rem; }
     .cv-viewer { height: 60vh; min-height: 500px; }
+    .cta-buttons { flex-direction: column; width: 100%; }
+    .btn { width: 100%; justify-content: center; }
 }
