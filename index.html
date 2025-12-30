@@ -1,145 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yusuf KARADUMAN</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Burak Fidan | Cyber Security Analyst</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-black text-white font-mono">
-    <!-- Header -->
-    <header class="p-6 border-b border-gray-700">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl md:text-3xl font-bold text-neon-green">Yusuf KARADUMAN</h1>
-            <nav>
-                <button id="menu-button" class="md:hidden text-neon-green focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-                <ul id="menu" class="hidden md:flex md:space-x-6 text-lg">
-                    <li class="text-center"><a href="#about" class="hover:text-neon-green">Hakkımda</a></li>
-                    <li class="text-center"><a href="#portfolio" class="hover:text-neon-green">Çalışmalar</a></li>
-                    <li class="text-center"><a href="#contact" class="hover:text-neon-green">İletişim</a></li>
+<body>
+
+    <canvas id="matrix" class="matrix-bg"></canvas>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">burakfidan.dev</div>
+            <ul class="nav-links">
+                <li><a href="#home">#home</a></li>
+                <li><a href="#projects">#projects</a></li>
+                <li><a href="#cv">#cv</a></li>
                 </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
-        <div class="text-center px-4">
-            <h2 class="text-4xl md:text-6xl font-bold text-neon-green">Dijital Dünyama Hoş Geldin</h2>
-            <p class="text-gray-400 mt-4 text-lg md:text-xl">Beraber Kodun Derinliklerine ve Güvenliğin Sınırlarına Yolculuk Yapalım</p>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="code-prefix">
+                        <span class="keyword">const</span> <span class="variable">developer</span> = {
+                    </div>
+                    
+                    <h1 class="glitch-title">Cyber Security<br>Analyst</h1>
+                    
+                    <h2 class="hero-subtitle">&& EU Project Writer</h2>
 
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-900">
-        <div class="container mx-auto text-center px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-neon-green mb-8">Hakkımda</h2>
-            <p class="text-gray-400 max-w-3xl mx-auto text-lg">Merhaba, ben Yusuf. Siber güvenlik ve yazılım konusunda tutkulu ve meraklı bir geliştiriciyim. Amacım, teknoloji dünyasını keşfetmek, yenilikçi çözümler üretmek ve siber güvenliğin karmaşık dünyasında insanlara rehberlik ederek katkı sağlamak. Sorun çözme ve kodlama tutkusuyla, sürekli gelişen dijital dünyada fark yaratmayı hedefliyorum.</p>
-        </div>
-    </section>
+                    <div class="code-details">
+                        <p>
+                            <span class="key">name:</span> <span class="string">"Burak Fidan"</span>,<br>
+                            <span class="key">mission:</span> <span class="string">"GSB Volunteer & Active Youth Worker"</span>,<br>
+                            <span class="key">skills:</span> [
+                            <span class="string">"Offensive Security"</span>, 
+                            <span class="string">"Red Team"</span>, 
+                            <span class="string">"C/C++"</span>, 
+                            <span class="string">"Python/AI"</span>, 
+                            <span class="string">"ESC+ Project Writer "</span>, 
+                            <span class="string">"Premiere Pro"</span>,
+                            <span class="string">"Adobe Photoshop"</span>,
+                             <span class="string">"Open Source Intelligence"</span>
+                            ]
+                        </p>
+                    </div>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-16">
-        <div class="container mx-auto text-center px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-neon-green mb-8">Çalışmalarım</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
-                    <h3 class="text-2xl font-bold text-neon-green">Hackmasters 2024</h3>
-                    <p class="text-gray-400 mt-2">
-                        <a href="https://www.linkedin.com/posts/do%C4%9Fukan%C3%A7al%C4%B1%C5%9Fkan_zer0night-ekibi-olarak-teknofest-hackmasters-activity-7228064308960649218-gltd?utm_source=share&utm_medium=member_desktop" 
-                           class="underline text-neon-green hover:text-white">
-                           Hackmasters 2024 ekibimle beraber 20.sırada yarışmayı tamamladık.
-                        </a>
+                    <p class="hero-description">
+                        Kod yazmayı seven, problemi çözmeyi seven ve sürekli öğrenen bir geliştiriciyim. 
+                        GSB Gençlik Merkezlerinde gönüllü olarak C, C++ ve Yapay Zeka dersleri veriyor, 
+                        aynı zamanda AB Projeleri yazıyorum.
                     </p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
-                    <h3 class="text-2xl font-bold text-neon-green">Bayraksende CTF Yarışması</h3>
-                    <p class="text-gray-400 mt-2">
-                        <a href="https://www.linkedin.com/posts/do%C4%9Fukan%C3%A7al%C4%B1%C5%9Fkan_5-liseler-aras%C4%B1-ulusal-bayra%C4%9F%C4%B1-yakala-siber-ugcPost-7200395236752162818-F3uq?utm_source=share&utm_medium=member_desktop" 
-                           class="underline text-neon-green hover:text-white">
-                           Bayraksende CTF yarışmasında finalde takımımla beraber 14. sırada yer aldık.
+
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            projects.explore()
                         </a>
-                    </p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
-                    <h3 class="text-2xl font-bold text-neon-green">Adeo Chupacapra Vakası Analizi</h3>
-                    <p class="text-gray-400 mt-2">
-                        <a href="https://www.linkedin.com/posts/yusuf-karaduman-666227290_chupacabra-vakas%C4%B1-activity-7153851415361138688-i900?utm_source=share&utm_medium=member_desktop" 
-                           class="underline text-neon-green hover:text-white">
-                           Adeo Chupacapra vakasını analiz ettim, bununla ilgili dokümantasyon hazırladım.
+                        <a href="mailto:contact@burakfidan.com.tr" class="btn btn-secondary">
+                            contact.send()
                         </a>
-                    </p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
-                    <h3 class="text-2xl font-bold text-neon-green">MedusaLocker Ransomware Grubu Analizi</h3>
-                    <p class="text-gray-400 mt-2">
-                        <a href="https://www.linkedin.com/posts/samet-yusuf-i%C3%A7gen-3310b32a2_medusalocker-ttp-diamond-model-ioc-ugcPost-7214722817018257408-9NrC?utm_source=share&utm_medium=member_desktop" 
-                           class="underline text-neon-green hover:text-white">
-                           MedusaLocker ransomware grubu hakkında detaylı bir araştırma yapıp belge hazırladım.
-                        </a>
-                    </p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
-                    <h3 class="text-2xl font-bold text-neon-green">8220 Gang</h3>
-                    <p class="text-gray-400 mt-2">
-                        <a href="https://www.linkedin.com/posts/yusuf-karaduman-666227290_8220-gang-siber-tehdit-i%CC%87stihbarat%C4%B1-oracle-activity-7206418469397966848-gVzO?utm_source=share&utm_medium=member_desktop" 
-                           class="underline text-neon-green hover:text-white">
-                           Saygıdeğer büyüğüm ile beraber 8220 Gang'i araştırıp kapsamlı bir belge hazırladık.
-                        </a>
-                    </p>
-                </div>
-                <div class="bg-gray-800 p-6 rounded-lg hover:shadow-lg">
-                    <h3 class="text-2xl font-bold text-neon-green">Nova Coin</h3>
-                    <p class="text-gray-400 mt-2">
-                        <a href="https://github.com/Deyiphafgug/Ton-nova" 
-                           class="underline text-neon-green hover:text-white">
-                           Web3.0 alanında TON altyapısında coin geliştirdik.
-                        </a>
-                    </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-900">
-        <div class="container mx-auto text-center px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-neon-green mb-8">İletişim Adresleri</h2>
-            <div class="max-w-lg mx-auto space-y-4">
-                <p class="text-gray-400">Aşağıdaki platformlar üzerinden benimle iletişime geçebilirsiniz:</p>
-                <div class="space-y-4">
-                    <a href="mailto:ysf.krdmn.info@gmail.com" class="block p-3 bg-gray-800 text-gray-200 rounded hover:bg-gray-700">Email: ysf.krdmn.info@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/yusuf-karaduman-666227290/" target="_blank" class="block p-3 bg-gray-800 text-gray-200 rounded hover:bg-gray-700">LinkedIn: LinkedIn Profili</a>
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-prefix">// </span>Selected Works</h2>
+                    <p class="section-description">
+                        Şu ana kadar geliştirdiğim yazılım projeleri ve Katıldığım AB projeleri. 
+                        Toplam proje sayısı: <span id="projectCount" class="accent-text">0</span>
+                    </p>
+                </div>
+                
+                <div id="projects-grid" class="projects-grid"></div>
+            </div>
+        </section>
+
+        <section id="cv" class="cv-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><span class="section-prefix">// </span>Resume</h2>
+                    <div class="cv-controls">
+                        <a href="cvBEF.pdf" class="btn btn-primary" download>
+                            Download CV (.pdf) <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cv-container">
+                    <div class="cv-viewer">
+                        <iframe src="cvBEF.pdf" title="CV Viewer"></iframe>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="py-6 text-center">
-        <p class="text-gray-400">&copy;2025 Tüm hakları saklıdır.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Burak Fidan. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/r8q"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/burakf/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/burakgsb"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <style>
-        .text-neon-green {
-            color: #39ff14;
-        }
-
-        .bg-neon-green {
-            background-color: #39ff14;
-        }
-    </style>
-    
-    <script>
-        const menuButton = document.getElementById('menu-button');
-        const menu = document.getElementById('menu');
-
-        menuButton.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
