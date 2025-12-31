@@ -35,14 +35,18 @@ body {
 }
 
 /* Matrix Effect Canvas */
-.matrix-bg {
+ .matrix-bg {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
     z-index: -1;
-    opacity: 0.05; /* Arka planı çok boğmaması için kısık opaklık */
+    
+    /* ESKİSİ: opacity: 0.05; (Çok silikti) */
+    opacity: 0.2; /* YENİ: Daha görünür olması için artırdık */
+    
     pointer-events: none;
 }
+
 
 .container {
     max-width: 1200px;
@@ -309,7 +313,50 @@ body {
     color: var(--accent-green);
     border-bottom-color: var(--accent-green);
 }
+/* --- TECH MARQUEE (KAYAN ŞERİT) --- */
+.tech-marquee {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    overflow: hidden; /* Taşmaları gizle */
+    position: relative;
+    z-index: 2;
+}
 
+.marquee-content {
+    display: flex;
+    gap: 4rem; /* Öğeler arası boşluk */
+    animation: scroll 25s linear infinite; /* Kayma animasyonu */
+    width: max-content; /* İçerik kadar genişle */
+}
+
+.tech-item {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap; /* Alt satıra inme */
+}
+
+.tech-item i {
+    color: var(--accent-green);
+    font-size: 1.3rem;
+}
+
+/* Kayma Animasyonu */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Yarısına kadar kaydırıp başa sarar */
+}
+
+/* Hover yapınca dursun (İncelemek isteyenler için) */
+.tech-marquee:hover .marquee-content {
+    animation-play-state: paused;
+}
 /* CV SECTION */
 .cv-section { padding: 100px 0; background: var(--bg-primary); }
 

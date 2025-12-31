@@ -67,6 +67,14 @@ const projects = [
         demo: "https://www.youthpass.eu/verify/3F5H-144W-PE3V-XHTV",
         github: ""
     },
+       {
+        id: 7,
+        title: "Berkay  Yayıncılık ",
+        description: "Programcı stajyeri olarak çoklu departmanlara IT desteği sağlandı, yazılım kurulumları ve dokümantasyon süreçleri yönetildi.",
+        tags: ["IT Support", "Digital Security","Internship"],
+        demo: "www.berkayyayincilik.com",
+        github: ""
+    },
 
 ];
 
