@@ -1,0 +1,11 @@
+# Security Contacts
+Contact: mailto:burakfedu@gmail.com
+Preferred-Languages: tr, en
+Canonical: https://burakfidan.dev/.well-known/security.txt
+
+# Policy
+Policy: https://burakfidan.dev/security-policy.html
+# (Politika sayfan yoksa bu satırı sil)
+
+# Hiring
+Hiring: https://linkedin.com/in/burakfidan
