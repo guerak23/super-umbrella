@@ -3,7 +3,7 @@ console.log(
     "color: #06b6d4; font-size: 24px; font-weight: bold; text-shadow: 2px 2px #000;"
 );
 console.log(
-    "%c Kodları incelediğini görüyorum. Eğer bir açık bulursan contact@burakfidan.com.tr adresinden bana ulaşabilirsin. İyi şanslar! 🕵️‍♂️",
+    "%c Kodları incelediğini görüyorum. Eğer bir açık bulursan contact@burakfidan.com.tr adresinden bana ulaşabilirsin, Tahaya TEŞEKKÜRLER.",
     "color: #94a3b8; font-size: 14px;"
 );
 console.log(
@@ -263,4 +263,5 @@ document.addEventListener('DOMContentLoaded', function() {
             canvas.height = window.innerHeight;
         }
     });
+
 });
