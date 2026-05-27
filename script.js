@@ -21,7 +21,7 @@ const projects = [
         title: "tbtsocial Social Media Agency",
         description: "Sosyal medya yönetimi, video prodüksiyon, grafik tasarım ve Python tabanlı otomasyon çözümleri sunan dijital ajans. Kurucu olarak ekip yönetimi ve müşteri ilişkileri.",
         tags: ["Founder", "Social Media", "Python Automation", "Content Strategy"],
-        demo: "https://tbtsocial.com",
+        demo: "https://socialtbt.com.tr/",
         github: ""
     },
     {
