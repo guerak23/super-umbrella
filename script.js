@@ -17,62 +17,99 @@ console.log(
 const projects = [
 
     {
+        id: 1,
+        title: "tbtsocial Social Media Agency",
+        description: "Sosyal medya yönetimi, video prodüksiyon, grafik tasarım ve Python tabanlı otomasyon çözümleri sunan dijital ajans. Kurucu olarak ekip yönetimi ve müşteri ilişkileri.",
+        tags: ["Founder", "Social Media", "Python Automation", "Content Strategy"],
+        demo: "https://tbtsocial.com",
+        github: ""
+    },
+    {
         id: 2,
-        title: "Spor Politikalarına Genç Bakış (National Summit)",
-        description: "Anadolu Parsı Gençlik ve Spor Kulübü tarafından düzenlenen Ulusal Zirve. Gençlerin spor politikalarına katılımı üzerine savunuculuk ve politika geliştirme çalışmaları.",
-        tags: ["Policy Making", "Youth Participation", "Advocacy", "National Summit"],
-        // National Summit Youthpass ID
-        demo: "https://www.youthpass.eu/verify/86MZ-T6RJ-XZNA-WQAC",
+        title: "Digitopia: Green Code",
+        description: "6 ülkeden katılımcıyla gerçekleştirilen Erasmus+ KA152 Gençlik Değişimi. E-atık yönetimi ve dijital karbon ayak izi üzerine proje koordinatörlüğü ve proje yazarlığı.",
+        tags: ["Project Coordinator", "Project Author", "Erasmus+ KA152", "6 Countries"],
+        demo: "https://www.youthpass.eu/verify/Z3JM-PN3J-M6DW-MEVK",
         github: ""
     },
     {
         id: 3,
-        title: "Spor Politikalarına Genç Bakış (Regional Workshop)",
-        description: "Karar alma mekanizmalarına gençlik katılımı ve aktif vatandaşlık üzerine bölgesel çalıştay. Spor politikalarını şekillendirmek için yerel düzeyde analizler.",
-        tags: ["Active Citizenship", "Workshop", "Sports Policy", "Non-formal Edu."],
-        // Regional Workshop Youthpass ID
-        demo: "https://www.youthpass.eu/verify/KMVF-G5US-3Z11-D9JY",
+        title: "Spor Politikalarına Genç Bakış (National Summit)",
+        description: "Anadolu Parsı Gençlik ve Spor Kulübü tarafından düzenlenen Ulusal Zirve. Gençlerin spor politikalarına katılımı üzerine savunuculuk ve politika geliştirme çalışmaları.",
+        tags: ["Policy Making", "Youth Participation", "Advocacy", "National Summit"],
+        demo: "https://www.youthpass.eu/verify/86MZ-T6RJ-XZNA-WQAC",
         github: ""
     },
     {
         id: 4,
-        title: "Creative Design Portfolio",
-        description: "MİMCE (Milli Mühendisler Cemiyeti) ve Genç EHAD için hazırlanan kurumsal kimlik çalışmaları, sosyal medya tasarımları ve etkinlik afişleri. (Canva & Photoshop)",
-        tags: ["Graphic Design", "Adobe Photoshop", "Brand Identity", "Social Media"],
-        // BURAYA KENDİ BEHANCE LİNKİNİ YAPIŞTIR
-        demo: "https://www.behance.net/burakfday",
+        title: "Spor Politikalarına Genç Bakış (Regional Workshop)",
+        description: "Karar alma mekanizmalarına gençlik katılımı ve aktif vatandaşlık üzerine bölgesel çalıştay. Spor politikalarını şekillendirmek için yerel düzeyde analizler.",
+        tags: ["Active Citizenship", "Workshop", "Sports Policy", "Non-formal Edu."],
+        demo: "https://www.youthpass.eu/verify/KMVF-G5US-3Z11-D9JY",
         github: ""
     },
     {
         id: 5,
-        title: "Against Internet Slang",
-        description: "Dünya Yazarlar ve Aydınlar Derneği tarafından düzenlenen, dijital çağda dilin korunması üzerine eğitim kursu. Premiere Pro ile içerik üretimi ve ekip koordinasyonu.",
-        tags: ["Erasmus+", "Content Creator", "Premiere Pro", "Team Lead"],
-        demo: "https://www.youthpass.eu/verify/B26S-M94E-WH3Y-LDQL", 
-        github: "" 
+        title: "Creative Design Portfolio",
+        description: "MİMCE (Milli Mühendisler Cemiyeti) ve Genç EHAD için hazırlanan kurumsal kimlik çalışmaları, sosyal medya tasarımları ve etkinlik afişleri. (Canva & Photoshop)",
+        tags: ["Graphic Design", "Adobe Photoshop", "Brand Identity", "Social Media"],
+        demo: "https://www.behance.net/burakfday",
+        github: ""
     },
     {
         id: 6,
-        title: "ODTÜ Teknokent - İMPARK",
-        description: "Programcı stajyeri olarak çoklu departmanlara IT desteği sağlandı, yazılım kurulumları ve dokümantasyon süreçleri yönetildi.",
-        tags: ["IT Support", "System Doc.", "Troubleshooting", "Internship"],
-        demo: "https://www.impark.com.tr",
-        github: "" 
+        title: "Against Internet Slang",
+        description: "Dünya Yazarlar ve Aydınlar Derneği tarafından düzenlenen, dijital çağda dilin korunması üzerine eğitim kursu. Premiere Pro ile içerik üretimi ve ekip koordinasyonu.",
+        tags: ["Erasmus+", "Content Creator", "Premiere Pro", "Team Lead"],
+        demo: "https://www.youthpass.eu/verify/B26S-M94E-WH3Y-LDQL",
+        github: ""
     },
     {
         id: 7,
+        title: "Youth: Find Your \"Self\"",
+        description: "Mersin Üniversitesi tarafından düzenlenen Erasmus+ eğitim kursu. Gençlerin kişisel gelişim süreçlerini destekleme, motivasyon ve geleceğe umutla bakış odaklı çalışmalar.",
+        tags: ["Erasmus+ KA153", "Youth Work", "Personal Development", "Intercultural"],
+        demo: "https://www.youthpass.eu/verify/ST34-T2UK-F2RT-MCXK",
+        github: ""
+    },
+    {
+        id: 8,
+        title: "Planning My Career",
+        description: "Eğitimde Görme Engelliler Derneği projesi. Engelli ve engelsiz gençlerin istihdamda karşılaştığı zorlukları ele alan, kapsayıcı politika geliştirme odaklı ulusal zirve.",
+        tags: ["Erasmus+", "Inclusive Employment", "Policy Advocacy", "Active Citizenship"],
+        demo: "https://www.youthpass.eu/verify/2AA7-JBBZ-Z12Q-AC9J",
+        github: ""
+    },
+    {
+        id: 9,
+        title: "Aerospace and Space Camp",
+        description: "TÜBİTAK ve Gençlik Bakanlığı iş birliğiyle düzenlenen seçici kampa katılım. Savunma teknolojileri, astronomi ve uzay ekosistemi üzerine uzman oturumları.",
+        tags: ["TÜBİTAK", "Aerospace", "Defense Tech", "Selected Participant"],
+        demo: "",
+        github: ""
+    },
+    {
+        id: 10,
+        title: "Employment 5.0: Integrating Young People into the Digital Future",
+        description: "Gençlerin dijital ekonomiye ve geleceğin iş dünyasına entegrasyonunu konu alan Erasmus+ projesi.",
+        tags: ["Erasmus+", "Digital Economy", "Future of Work", "Youth"],
+        demo: "", // Sertifika gelince buraya youthpass linki ekle
+        github: ""
+    },
+    {
+        id: 11,
         title: "Dijital Çağda İnsani Yardım Zirvesi",
         description: "Trabzon Gençlik Merkezleri projesi. İnsani yardım süreçlerinde dijitalleşme, çevrimiçi güvenlik ve siber zorbalık konularında atölye çalışmaları.",
         tags: ["Humanitarian Aid", "Digital Security", "Erasmus+", "Volunteering"],
         demo: "https://www.youthpass.eu/verify/3F5H-144W-PE3V-XHTV",
         github: ""
     },
-       {
-        id: 7,
-        title: "Berkay  Yayıncılık ",
+    {
+        id: 12,
+        title: "ODTÜ Teknokent - İMPARK",
         description: "Programcı stajyeri olarak çoklu departmanlara IT desteği sağlandı, yazılım kurulumları ve dokümantasyon süreçleri yönetildi.",
-        tags: ["IT Support", "Digital Security","Internship"],
-        demo: "www.berkayyayincilik.com",
+        tags: ["IT Support", "System Doc.", "Troubleshooting", "Internship"],
+        demo: "https://www.impark.com.tr",
         github: ""
     },
 
