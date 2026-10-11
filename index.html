@@ -1,157 +1,482 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <link rel="icon" href="/images/favicon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burak Fidan | Cyber Security & Digital Creator</title>
-    
-    <link rel="stylesheet" href="styles.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Burak Fidan — Digital Creator, Founder & Tech Enthusiast</title>
+    <meta name="description" content="Personal portfolio of Burak Fidan. Founder at tbtsocial, Erasmus+ Project Coordinator, and Tech/Cyber Security Enthusiast.">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:;">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Apple-style CSS -->
+    <link rel="stylesheet" href="css/apple-portfolio.css?v=2.1">
 </head>
 <body>
 
-    <canvas id="matrix" class="matrix-bg"></canvas>
+    <!-- 1. Floating Frosted Glass Limelight Navigation -->
+    <nav class="nav" id="mainNav">
+        <span class="nav-logo">burakfidan.</span>
+        <a href="#hero" class="nav-link active" data-section="hero">Overview</a>
+        <a href="#featured" class="nav-link" data-section="featured">Featured</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#about" class="nav-link" data-section="about">Skills</a>
+        <a href="#contact" class="nav-cta">Let's Talk</a>
+    </nav>
 
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">burakfidan.dev</div>
-            <ul class="nav-links">
-                <li><a href="#home">#home</a></li>
-                <li><a href="#projects">#projects</a></li>
-                <li><a href="#cv">#cv</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- 2. Hero Section (3D Interactive Memoji with Mouse/Touch Spring Physics) -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-eyebrow">
+                    <span class="dot"></span>
+                    Available for global projects & partnerships
+                </div>
+                
+                <h1 class="hero-name">
+                    Crafting digital impact with <span class="accent">purpose</span>.
+                </h1>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container hero-container">
-                <div class="hero-content">
-                    <div class="code-prefix">
-                        <span class="keyword">const</span> <span class="variable">profile</span> = {
+                <p class="hero-title">
+                    Hi, I'm <strong>Burak Fidan</strong>. Founder at <strong>tbtsocial</strong>, Erasmus+ Project Coordinator across 6+ countries, and tech enthusiast focused on automation & cyber security.
+                </p>
+
+                <div class="hero-tags">
+                    <span class="hero-tag"><i class="fas fa-rocket text-amber"></i> Agency Founder</span>
+                    <span class="hero-tag"><i class="fas fa-earth-europe text-indigo"></i> Erasmus+ Coordinator</span>
+                    <span class="hero-tag"><i class="fas fa-shield-halved text-indigo"></i> Cyber Security</span>
+                    <span class="hero-tag"><i class="fab fa-python"></i> Python & Automation</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#featured" class="btn btn-primary">
+                        Explore Work <i class="fas fa-arrow-down-long"></i>
+                    </a>
+                    <a href="assets/docs/Burak_Fidan_CV.pdf" download class="btn btn-ghost">
+                        Download CV (.pdf) <i class="fas fa-file-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3D Interactive Memoji Stage (Pure Spatial Apple Physics) -->
+            <div class="memoji-stage-container" id="memojiStage">
+                <div class="memoji-ambient-glow"></div>
+                
+                <div class="memoji-spatial-card" id="memojiSpatialCard">
+                    <img src="assets/memoji/memoji-scout.webp" id="memoji-hero" alt="Burak Fidan Memoji" draggable="false">
+                    <div class="memoji-ground-shadow" id="memojiShadow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Dynamic Marquee Strip -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-item"><i class="fas fa-bolt mi-icon"></i> Agency Operations</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-globe-americas mi-icon"></i> Erasmus+ KA152 & KA153</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-shield-virus mi-icon"></i> Threat Analysis & OSINT</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fab fa-python mi-icon"></i> Automation Scripts</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-clapperboard mi-icon"></i> Adobe Premiere & Visuals</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-users-gear mi-icon"></i> Youth Leadership</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-rocket mi-icon"></i> tbtsocial Media</div>
+            <div class="marquee-dot"></div>
+            <!-- Repeat for seamless loop -->
+            <div class="marquee-item"><i class="fas fa-bolt mi-icon"></i> Agency Operations</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-globe-americas mi-icon"></i> Erasmus+ KA152 & KA153</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-shield-virus mi-icon"></i> Threat Analysis & OSINT</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fab fa-python mi-icon"></i> Automation Scripts</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-clapperboard mi-icon"></i> Adobe Premiere & Visuals</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-users-gear mi-icon"></i> Youth Leadership</div>
+            <div class="marquee-dot"></div>
+            <div class="marquee-item"><i class="fas fa-rocket mi-icon"></i> tbtsocial Media</div>
+            <div class="marquee-dot"></div>
+        </div>
+    </div>
+
+    <!-- 4. Apple Bento Grid — Core Pillars & Memoji Interactions -->
+    <section class="section" id="featured" data-fade>
+        <div class="section-header">
+            <span class="label">Highlighted Experience</span>
+            <h2 class="section-title">Built with vision, driven by execution.</h2>
+            <p class="section-lead">A snapshot of businesses founded, youth delegations led, and technical domains explored.</p>
+        </div>
+
+        <div class="bento-grid">
+            <!-- Card 1: tbtsocial Agency (Span 7) -->
+            <div class="card card-featured bento-span-7 agency-card">
+                <div>
+                    <span class="agency-badge">Ventures & Media</span>
+                    <h3 class="agency-name">tbtsocial.</h3>
+                    <p class="card-desc">
+                        Full-scale content operations & social media agency. Leading video editors, graphic designers, and deploying proprietary Python scrapers for client growth.
+                    </p>
+                </div>
+                <div class="card-memoji">
+                    <div class="card-tags">
+                        <span class="tag">Founder & Lead</span>
+                        <span class="tag">Video Production</span>
+                        <span class="tag">Python Scraping</span>
                     </div>
-                    
-                    <h1 class="glitch-title">Digital Creator<br><span style="font-size: 0.6em; color: var(--text-secondary); font-weight: 400;">& Erasmus+ Coordinator</span></h1>
-                    
-                    <h2 class="hero-subtitle">&& Cyber Security Analyst</h2>
+                    <img src="assets/memoji/memoji-party.webp" class="card-memoji-img" alt="tbtsocial Party Memoji">
+                </div>
+                <div>
+                    <a href="https://socialtbt.com.tr/" target="_blank" rel="noopener" class="agency-url">
+                        Visit socialtbt.com.tr <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
 
-                    <div class="code-details">
-                        <p>
-                            <span class="key">name:</span> <span class="string">"Burak Fidan"</span>,<br>
-                            <span class="key">skills:</span> <span class="string">["Content Creation", "EU Project Mgmt", "OSINT"]</span>,<br>
-                            <span class="key">passion:</span> <span class="string">"Social Impact & Youth Work"</span>,<br>
-                            <span class="key">status:</span> <span class="keyword">true</span> <span class="comment">// Creating & Leading...</span>
+            <!-- Card 2: Erasmus+ Leadership (Span 5) -->
+            <div class="card bento-span-5">
+                <span class="label" style="color: var(--amber-dark);">Global Impact</span>
+                <h3 class="card-title" style="margin-top: 6px;">Erasmus+ Youth Delegations</h3>
+                <p class="card-desc">
+                    Coordinated multi-national exchanges focusing on green tech, inclusive policy, and e-waste management across Europe.
+                </p>
+                
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Countries</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Youthpass</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Verified</div>
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px;">
+                    <a href="https://www.youthpass.eu/verify/Z3JM-PN3J-M6DW-MEVK" target="_blank" rel="noopener" class="card-link">
+                        Verify Youthpass <i class="fas fa-certificate"></i>
+                    </a>
+                    <img src="assets/memoji/memoji-peace.webp" style="width: 58px; height: 58px; object-fit: contain;" alt="Peace Memoji">
+                </div>
+            </div>
+
+            <!-- Card 3: Cyber Security & Intelligence (Span 5) -->
+            <div class="card card-cyber bento-span-5">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <span class="label" style="color: var(--indigo);">Defensive & Offensive</span>
+                        <h3 class="card-title" style="margin-top: 6px;">Cyber Security & OSINT</h3>
+                    </div>
+                    <img src="assets/memoji/memoji-wink.webp" style="width: 54px; height: 54px; object-fit: contain;" alt="Wink Memoji">
+                </div>
+                
+                <p class="card-desc">
+                    Undergraduate study in Computer Programming coupled with hands-on practice in system hardening, vulnerability research, and threat intelligence.
+                </p>
+
+                <div class="cyber-grid">
+                    <div class="cyber-skill"><span class="cyber-skill-dot"></span> OSINT Investigation</div>
+                    <div class="cyber-skill"><span class="cyber-skill-dot"></span> Red Team Fundamentals</div>
+                    <div class="cyber-skill"><span class="cyber-skill-dot"></span> Network Forensics</div>
+                    <div class="cyber-skill"><span class="cyber-skill-dot"></span> Secure IT Maintenance</div>
+                </div>
+
+                <div style="margin-top: 16px;">
+                    <a href="#projects" class="card-link card-link-indigo">
+                        View Technical Works <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4: Creative & Visual Design (Span 7) -->
+            <div class="card bento-span-7">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <span class="label">Visual Engineering</span>
+                        <h3 class="card-title" style="margin-top: 6px;">Creative Direction & Brand Identity</h3>
+                        <p class="card-desc" style="max-width: 440px;">
+                            Led design & video content for national engineering associations (MİMCE) and community organizations (Genç EHAD). 
                         </p>
                     </div>
+                    <img src="assets/memoji/memoji-fire.webp" class="card-memoji-img" alt="Creative Fire Memoji">
+                </div>
 
-                    <p class="hero-description">
-                        Dijital dünyada içerik üretiyor, fiziksel dünyada <strong>AB projeleri</strong> yönetiyorum. 
-                        Aynı zamanda güvenli sistemler tasarlayan bir <strong>Siber Güvenlik</strong> öğrencisiyim. 
-                        Yaratıcılığı teknoloji ve gönüllülükle birleştiriyorum.
-                    </p>
+                <div class="card-tags" style="margin-top: 10px;">
+                    <span class="tag">Adobe Premiere Pro</span>
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Event Identity</span>
+                    <span class="tag">Motion Graphic</span>
+                </div>
 
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            view.portfolio()
-                        </a>
-                        <a href="mailto:contact@burakfidan.com.tr" class="btn btn-secondary">
-                            contact.me()
-                        </a>
-                    </div>
-                    
-                    <div class="code-prefix" style="margin-top: 1rem;">
-                        };
-                    </div>
+                <div style="margin-top: 12px;">
+                    <a href="https://www.behance.net/burakfday" target="_blank" rel="noopener" class="card-link">
+                        View Behance Portfolio <i class="fab fa-behance"></i>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <div class="tech-marquee">
-            <div class="marquee-content">
-                <div class="tech-item"><i class="fab fa-python"></i> Python</div>
-                <div class="tech-item"><i class="fas fa-shield-alt"></i> OSINT</div>
-                <div class="tech-item"><i class="fas fa-user-secret"></i> RED TEAM</div>
-                <div class="tech-item"><i class="fas fa-video"></i> Premiere Pro</div>
-                <div class="tech-item"><i class="fas fa-image"></i> Adobe Photoshop</div>
-                <div class="tech-item"><i class="fab fa-react"></i> React</div>
-                <div class="tech-item"><i class="fas fa-plane"></i> Erasmus+</div>
-                <div class="tech-item"><i class="fas fa-camera"></i> Photography</div>
-                
-                <div class="tech-item"><i class="fab fa-python"></i> Python</div>
-                <div class="tech-item"><i class="fas fa-shield-alt"></i> OSINT</div>
-                <div class="tech-item"><i class="fas fa-user-secret"></i> RED TEAM</div>
-                <div class="tech-item"><i class="fas fa-video"></i> Premiere Pro</div>
-                <div class="tech-item"><i class="fas fa-image"></i> Adobe Photoshop</div>
-                <div class="tech-item"><i class="fab fa-react"></i> React</div>
-                <div class="tech-item"><i class="fas fa-plane"></i> Erasmus+</div>
-                <div class="tech-item"><i class="fas fa-camera"></i> Photography</div>
+    <!-- 5. All Projects & Verified Records -->
+    <section class="section" id="projects" data-fade>
+        <div class="all-projects-header">
+            <div>
+                <span class="label">Complete Portfolio</span>
+                <h2 class="section-title">Verified Records & Works</h2>
+            </div>
+            
+            <!-- Category Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All (12)</button>
+                <button class="filter-tab" data-filter="erasmus">Erasmus+</button>
+                <button class="filter-tab" data-filter="agency">Agency</button>
+                <button class="filter-tab" data-filter="tech">Tech & Cyber</button>
+                <button class="filter-tab" data-filter="design">Design</button>
             </div>
         </div>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title"><span class="section-prefix">// </span>Projects & Experience</h2>
-                    <p class="section-description">
-                        Yazılım projelerim, yönettiğim AB projeleri ve tasarım çalışmalarım.
-                        Toplam kayıt: <span id="projectCount" class="accent-text">0</span>
-                    </p>
+        <div class="projects-list">
+            <!-- Project items dynamically filtered -->
+            <div class="project-card-mini" data-category="agency">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">Agency</span>
+                    <a href="https://socialtbt.com.tr/" target="_blank" class="card-link" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                
-                <div id="projects-grid" class="projects-grid"></div>
+                <h3 class="card-title">tbtsocial Social Media Agency</h3>
+                <p class="card-desc">Social media operations, video editing pipelines, and Python automations for business growth.</p>
             </div>
-        </section>
 
-        <section id="cv" class="cv-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title"><span class="section-prefix">// </span>Resume</h2>
-                    <div class="cv-controls">
-                        <a href="CVBEF2.pdf" class="btn btn-primary" download>
-                            Download CV (.pdf) <i class="fas fa-download"></i>
-                        </a>
-                    </div>
+            <div class="project-card-mini" data-category="erasmus">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">Erasmus+ KA152</span>
+                    <a href="https://www.youthpass.eu/verify/Z3JM-PN3J-M6DW-MEVK" target="_blank" class="card-link" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fas fa-certificate"></i></a>
                 </div>
-
-                <div class="cv-container">
-                    <div class="cv-viewer">
-                        <iframe src="CVBEF2.pdf" title="CV Viewer"></iframe>
-                    </div>
-                </div>
+                <h3 class="card-title">Digitopia: Green Code</h3>
+                <p class="card-desc">6-country youth exchange on digital carbon footprint and sustainable e-waste solutions.</p>
             </div>
-        </section>
-    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Burak Fidan. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/r8q" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                
-                <a href="https://linkedin.com/in/burakfidan" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                
-                <a href="https://instagram.com/burakgsb" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
+            <div class="project-card-mini" data-category="erasmus">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">National Summit</span>
+                    <a href="https://www.youthpass.eu/verify/86MZ-T6RJ-XZNA-WQAC" target="_blank" class="card-link" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fas fa-certificate"></i></a>
+                </div>
+                <h3 class="card-title">Youth Perspective in Sports Policy</h3>
+                <p class="card-desc">Advocacy and policy development sessions with Anadolu Parsı Youth & Sports Club.</p>
+            </div>
 
-                <a href="https://www.behance.net/burakfday" target="_blank" title="Behance">
-                    <i class="fab fa-behance"></i>
-                </a>
+            <div class="project-card-mini" data-category="design">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">Creative</span>
+                    <a href="https://www.behance.net/burakfday" target="_blank" class="card-link" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fab fa-behance"></i></a>
+                </div>
+                <h3 class="card-title">MİMCE & Genç EHAD Brand Assets</h3>
+                <p class="card-desc">Corporate banners, social media campaigns, and print graphics for national associations.</p>
+            </div>
+
+            <div class="project-card-mini" data-category="erasmus">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">Erasmus+</span>
+                    <a href="https://www.youthpass.eu/verify/B26S-M94E-WH3Y-LDQL" target="_blank" class="card-link" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fas fa-certificate"></i></a>
+                </div>
+                <h3 class="card-title">Against Internet Slang</h3>
+                <p class="card-desc">Digital media training on preserving linguistic nuance in the algorithm era.</p>
+            </div>
+
+            <div class="project-card-mini" data-category="erasmus">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">Erasmus+ KA153</span>
+                    <a href="https://www.youthpass.eu/verify/ST34-T2UK-F2RT-MCXK" target="_blank" class="card-link" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fas fa-certificate"></i></a>
+                </div>
+                <h3 class="card-title">Youth: Find Your "Self"</h3>
+                <p class="card-desc">Personal development, motivation, and intercultural learning at Mersin University.</p>
+            </div>
+
+            <div class="project-card-mini" data-category="erasmus">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">Advocacy</span>
+                    <a href="https://www.youthpass.eu/verify/2AA7-JBBZ-Z12Q-AC9J" target="_blank" class="card-link" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fas fa-certificate"></i></a>
+                </div>
+                <h3 class="card-title">Planning My Career</h3>
+                <p class="card-desc">Inclusive employment summit supporting youth with and without visual impairments.</p>
+            </div>
+
+            <div class="project-card-mini" data-category="tech">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag tag-indigo">TÜBİTAK</span>
+                    <span style="font-size: 0.72rem; color: var(--ink-tertiary);">Selected</span>
+                </div>
+                <h3 class="card-title">Aerospace & Space Technology Camp</h3>
+                <p class="card-desc">Defense industries, satellite telemetry, and space science masterclasses by TÜBİTAK.</p>
+            </div>
+
+            <div class="project-card-mini" data-category="tech">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag tag-indigo">Internship</span>
+                    <a href="https://www.impark.com.tr" target="_blank" class="card-link card-link-indigo" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <h3 class="card-title">METU Technopolis — İMPARK</h3>
+                <p class="card-desc">Software installation, multi-department IT technical support, and task tracking.</p>
+            </div>
+
+            <div class="project-card-mini" data-category="erasmus">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">Volunteering</span>
+                    <a href="https://www.youthpass.eu/verify/3F5H-144W-PE3V-XHTV" target="_blank" class="card-link" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fas fa-certificate"></i></a>
+                </div>
+                <h3 class="card-title">Humanitarian Aid in Digital Age</h3>
+                <p class="card-desc">Workshops on digital security, online safety, and disaster response tools.</p>
+            </div>
+
+            <div class="project-card-mini" data-category="erasmus">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">Digital Future</span>
+                </div>
+                <h3 class="card-title">Employment 5.0 in Europe</h3>
+                <p class="card-desc">Integrating next-generation youth into AI-driven remote workspaces and future work models.</p>
+            </div>
+
+            <div class="project-card-mini" data-category="erasmus">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="tag">Workshop</span>
+                    <a href="https://www.youthpass.eu/verify/KMVF-G5US-3Z11-D9JY" target="_blank" class="card-link" style="padding: 4px 8px; font-size: 0.72rem;"><i class="fas fa-certificate"></i></a>
+                </div>
+                <h3 class="card-title">Regional Sports Participation</h3>
+                <p class="card-desc">Grassroots policy analysis and civic engagement for young community leaders.</p>
             </div>
         </div>
+    </section>
+
+    <!-- 6. About & Technical Capabilities -->
+    <section class="section" id="about" data-fade>
+        <div class="section-header">
+            <span class="label">Background & Capabilities</span>
+            <h2 class="section-title">Bridging technology, media & leadership.</h2>
+        </div>
+
+        <div class="about-grid">
+            <!-- Modern Apple Tech & Capabilities Grid -->
+            <div class="card">
+                <span class="label" style="color: var(--amber-dark);">Core Expertise</span>
+                <h3 class="card-title" style="margin-top: 6px; margin-bottom: 16px;">Technical & Creative Ecosystem</h3>
+                
+                <div class="stack-categories">
+                    <!-- Category: Creative & Production -->
+                    <div class="stack-group">
+                        <div class="stack-group-title"><i class="fas fa-video text-amber"></i> Video & Visual Media</div>
+                        <div class="stack-badges">
+                            <span class="stack-pill"><i class="fas fa-film"></i> Adobe Premiere Pro</span>
+                            <span class="stack-pill"><i class="fas fa-wand-magic-sparkles"></i> After Effects</span>
+                            <span class="stack-pill"><i class="fas fa-palette"></i> Adobe Photoshop</span>
+                            <span class="stack-pill"><i class="fas fa-layer-group"></i> Canva Pro</span>
+                        </div>
+                    </div>
+
+                    <!-- Category: Code & Automation -->
+                    <div class="stack-group">
+                        <div class="stack-group-title"><i class="fab fa-python text-amber"></i> Code & Automation</div>
+                        <div class="stack-badges">
+                            <span class="stack-pill"><i class="fab fa-python"></i> Python (Bots & Scrapers)</span>
+                            <span class="stack-pill"><i class="fab fa-js"></i> JavaScript & ES6+</span>
+                            <span class="stack-pill"><i class="fab fa-html5"></i> Modern Web (HTML/CSS)</span>
+                            <span class="stack-pill"><i class="fab fa-git-alt"></i> Git & GitHub Workflows</span>
+                        </div>
+                    </div>
+
+                    <!-- Category: Security & Analysis -->
+                    <div class="stack-group">
+                        <div class="stack-group-title"><i class="fas fa-shield-halved text-indigo"></i> Cyber Security & Intelligence</div>
+                        <div class="stack-badges">
+                            <span class="stack-pill stack-pill-indigo"><i class="fas fa-user-secret"></i> OSINT Investigations</span>
+                            <span class="stack-pill stack-pill-indigo"><i class="fas fa-terminal"></i> Kali Linux & VM</span>
+                            <span class="stack-pill stack-pill-indigo"><i class="fas fa-network-wired"></i> Network Forensics</span>
+                            <span class="stack-pill stack-pill-indigo"><i class="fas fa-lock"></i> Threat Analysis</span>
+                        </div>
+                    </div>
+
+                    <!-- Category: Leadership & EU Projects -->
+                    <div class="stack-group">
+                        <div class="stack-group-title"><i class="fas fa-earth-europe text-amber"></i> Project Management & EU</div>
+                        <div class="stack-badges">
+                            <span class="stack-pill"><i class="fas fa-file-signature"></i> Erasmus+ KA152 & KA153</span>
+                            <span class="stack-pill"><i class="fas fa-users-gear"></i> Youth Leadership & Mentorship</span>
+                            <span class="stack-pill"><i class="fas fa-bullhorn"></i> Content Strategy & Campaigns</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <span class="label" style="color: var(--amber-dark);">Education</span>
+                    <h3 class="card-title" style="margin-top: 6px;">Computer Programming</h3>
+                    <p style="font-size: 0.88rem; color: var(--ink-secondary); margin-bottom: 12px;">
+                        <strong>Ahmet Yesevi University</strong> — Associate Degree (2023 - Present)
+                    </p>
+                    <p class="card-desc">
+                        Focused on software architecture, data structures, network foundations, and defensive programming practices.
+                    </p>
+                </div>
+
+                <div style="background: var(--bg-subtle); padding: 16px; border-radius: var(--r-md); margin-top: 20px; display: flex; align-items: center; gap: 14px;">
+                    <img src="assets/memoji/memoji-surprised.webp" style="width: 48px; height: 48px; object-fit: contain;" alt="Curious Memoji">
+                    <div>
+                        <div style="font-size: 0.82rem; font-weight: 700; color: var(--ink);">Always learning.</div>
+                        <div style="font-size: 0.78rem; color: var(--ink-secondary);">Exploring AI agent pipelines, workflow automation & OSINT.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Contact / Call to Action -->
+    <section class="contact-section" id="contact" data-fade>
+        <img src="assets/memoji/memoji-party.webp" class="contact-memoji" alt="Party Memoji Celebration">
+        <h2 class="contact-heading">Let's build something remarkable.</h2>
+        <p class="contact-sub">
+            Whether it's an Erasmus+ consortium, high-converting social media operation, or technical automation.
+        </p>
+
+        <div>
+            <a href="mailto:contact@burakfidan.com.tr" class="btn btn-amber" style="padding: 16px 36px; font-size: 1.05rem;">
+                contact@burakfidan.com.tr <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+
+        <div class="social-row">
+            <a href="https://github.com/r8q" target="_blank" rel="noopener" class="social-btn">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com/in/burakfidan" target="_blank" rel="noopener" class="social-btn">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://instagram.com/burakgsb" target="_blank" rel="noopener" class="social-btn">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.behance.net/burakfday" target="_blank" rel="noopener" class="social-btn">
+                <i class="fab fa-behance"></i> Behance
+            </a>
+        </div>
+    </section>
+
+    <!-- 8. Footer -->
+    <footer>
+        <p>&copy; 2026 Burak Fidan. All rights reserved. Designed with Apple human interface standards & fluid spring physics.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- App Logic -->
+    <script src="js/app.js?v=2.1"></script>
 </body>
-
 </html>
